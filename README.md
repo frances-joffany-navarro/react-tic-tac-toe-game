@@ -8,4 +8,4 @@ The tutorial is divided into several sections:
 - Completing the game will teach you the most common techniques in React development.
 - Adding time travel will give you a deeper insight into the unique strengths of React.
 
-[](https://react.dev/learn/tutorial-tic-tac-toe)
+[Link to Tutorial](https://react.dev/learn/tutorial-tic-tac-toe)
