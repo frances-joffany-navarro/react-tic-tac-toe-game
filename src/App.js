@@ -63,9 +63,8 @@ export default function Game() {
   }
 
   function jumpTo(nextMove) { }
-  
+
   const moves = history.map((squares, move) => {
-    console.log(squares, move)
     let description;
     if (move > 0) {
       description = "Go to move #" + move;
