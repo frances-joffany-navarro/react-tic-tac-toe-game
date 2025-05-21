@@ -4,6 +4,7 @@ function Square({ value, onSquareClick }) {
     <button className="square" onClick={onSquareClick}>{value}</button>
   );
 }
+
 function Board({ xIsNext, squares, onPlay }) {
 
   function handleClick(i) {
@@ -30,9 +31,25 @@ function Board({ xIsNext, squares, onPlay }) {
   } else {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
+
+  for (let i = 1; i <= 3; i++) {
+    <div key={i} className="board-row">
+      <Square key={index} value={squares} onSquareClick={() => handleClick(index)} />
+    </div>
+  }
+
+  const divSquares = squares.map((squares, i) =>
+
+    <div key={i} className="board-row">
+      <Square key={index} value={squares} onSquareClick={() => handleClick(index)} />
+    </div>
+  );
+
   return (
     <>
-      <div className="status">{status}</div >
+      <div className="status">{status}</div>
+      {divSquares}
+
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
